@@ -803,6 +803,7 @@ func (f *file) lintTypeDoc(t *ast.TypeSpec, doc *ast.CommentGroup) {
 }
 
 var commonMethods = map[string]bool{
+	"Name":      true,
 	"Error":     true,
 	"Read":      true,
 	"ServeHTTP": true,
