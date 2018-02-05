@@ -839,7 +839,11 @@ func (f *file) lintFuncDoc(fn *ast.FuncDecl) {
 		}
 		name = recv + "." + name
 	}
-	if fn.Doc == nil {
+
+	// do not require functions with the prefix New to have a comment
+	fnFormIsNew := strings.HasPrefix(name, "New")
+
+	if fn.Doc == nil && !fnFormIsNew {
 		f.errorf(fn, 1, link(docCommentsLink), category("comments"), "exported %s %s should have comment or be unexported", kind, name)
 		return
 	}
