@@ -6,7 +6,7 @@ Golint is a linter for Go source code.
 
 Golint requires Go 1.6 or later.
 
-    go get -u github.com/golang/lint/golint
+    go get -u github.com/tendermint/lint/golint
 
 ## Usage
 
@@ -43,7 +43,7 @@ Golint makes suggestions for many of the mechanically checkable items listed in
 
 If you find an established style that is frequently violated, and which
 you think golint could statically check,
-[file an issue](https://github.com/golang/lint/issues).
+[file an issue](https://github.com/tendermint/lint/issues).
 
 ## Contributions
 
@@ -57,7 +57,7 @@ before we can accept your contribution.
 
 Add this to your ~/.vimrc:
 
-    set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
+    set rtp+=$GOPATH/src/github.com/tendermint/lint/misc/vim
 
 If you have multiple entries in your GOPATH, replace `$GOPATH` with the right value.
 
@@ -72,7 +72,7 @@ Optionally, add this to your `~/.vimrc` to automatically run `golint` on `:w`
 
 Add this to your `.emacs` file:
 
-    (add-to-list 'load-path (concat (getenv "GOPATH")  "/src/github.com/golang/lint/misc/emacs"))
+    (add-to-list 'load-path (concat (getenv "GOPATH")  "/src/github.com/tendermint/lint/misc/emacs"))
     (require 'golint)
 
 If you have multiple entries in your GOPATH, replace `$GOPATH` with the right value.
